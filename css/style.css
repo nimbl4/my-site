@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+:root { --ink: #172033; --muted: #667085; --accent: #2563eb; --paper: #f5f7fb; }
+body { margin: 0; font-family: Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 7%; background: #fff; box-shadow: 0 2px 14px #17203310; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; }
+.logo { width: 38px; height: 38px; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a { color: var(--muted); text-decoration: none; padding: 9px 13px; border-radius: 8px; }
+nav a:hover, nav a.active { color: var(--accent); background: #eff6ff; }
+.hero { min-height: 70vh; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 40px; padding: 70px 9%; }
+.hero-text { max-width: 580px; }
+h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.12; margin: 8px 0 18px; }
+h2 { margin-top: 30px; }
+p { color: var(--muted); }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700; }
+.button { display: inline-block; margin-top: 14px; padding: 12px 20px; color: white; background: var(--accent); border-radius: 9px; text-decoration: none; }
+.hero-image { width: 100%; max-width: 480px; justify-self: center; }
+.content { max-width: 900px; min-height: 70vh; margin: auto; padding: 65px 7%; }
+.content li { margin: 10px 0; color: var(--muted); }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; margin-top: 28px; }
+figure, .contact-card { margin: 0; padding: 18px; background: #fff; border-radius: 14px; box-shadow: 0 5px 20px #1720330d; }
+figure img { width: 100%; height: 190px; object-fit: contain; }
+figcaption { color: var(--muted); text-align: center; padding-top: 10px; }
+footer { padding: 22px; text-align: center; color: var(--muted); background: #fff; }
+@media (max-width: 700px) { .header { align-items: flex-start; flex-direction: column; } .hero { grid-template-columns: 1fr; padding-top: 45px; } .hero-image { max-width: 320px; } }
